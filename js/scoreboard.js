@@ -132,6 +132,6 @@ function map(location) {
     } else {
         console.log("normal:"+location);
         $(".left").css("left","0vw");
-        $(".right").css("right","-0.3vw");
+        $(".right").css("right","-0.03vw");
     }
 }
