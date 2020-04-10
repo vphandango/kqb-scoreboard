@@ -39,13 +39,14 @@ function pollHandler() {
 
 function update() {
     console.log('entered update');
+    var currentmap;
     if(firstupdate) {
         console.log('firstupdate');
         $('#left_score').html(scObj['Ls']);
         $('#right_score').html(scObj['Rs']);
         $('#left_name').html(scObj['Ln']);
         $('#right_name').html(scObj['Rn']);
-        map(scObj['map']);
+        currentmap = map(scObj['map']);
         firstupdate = false;
     } else {
         if (scObj['allTake'] == timestamp) {
@@ -59,7 +60,7 @@ function update() {
                 $('#right_score').html(scObj['Rs']);
                 $('#left_name').html(scObj['Ln']);
                 $('#right_name').html(scObj['Rn']);
-                map(scObj['map']);
+                currentmap = map(scObj['map']);
                 TweenMax.to($('#container'), .3, {className:"visible", onComplete: () => {
                     TweenMax.to($('#left_frgd'), .3, {opacity: 1, ease:Quad.easeIn, delay: .3});
                     TweenMax.to($('#right_frgd'), .3, {opacity: 1, ease:Quad.easeIn, delay: .3});
@@ -111,8 +112,35 @@ function update() {
                     TweenMax.to($('#right_name'), .3, {opacity: 1, ease:Quad.easeIn, delay: .4});
                 }});
             }
-        }
+            if (currentmap !== scObj['map']) {
+                TweenMax.to($('#container'), .3, {className:"hidden", onComplete: () => {
+                    TweenMax.to($('#left_frgd'), .1, {opacity: 0, ease:Quad.easeIn});
+                    TweenMax.to($('#right_frgd'), .1, {opacity: 0, ease:Quad.easeIn});
+                    TweenMax.to($('#left_bkgd'), .1, {opacity: 0, ease:Quad.easeIn});
+                    TweenMax.to($('#right_bkgd'), .1, {opacity: 0, ease:Quad.easeIn});
+                    TweenMax.to($('#left_name'), .1, {opacity: 0, ease:Quad.easeIn,});
+                    TweenMax.to($('#right_name'), .1, {opacity: 0, ease:Quad.easeIn});
+                    TweenMax.to($('#left_score'), .1, {opacity: 0, ease:Quad.easeIn});
+                    TweenMax.to($('#right_score'), .1, {opacity: 0, ease:Quad.easeIn});
+                    $('#left_score').html(scObj['Ls']);
+                    $('#right_score').html(scObj['Rs']);
+                    $('#left_name').html(scObj['Ln']);
+                    $('#right_name').html(scObj['Rn']);
+                    currentmap = map(scObj['map']);
+                    TweenMax.to($('#container'), .3, {className:"visible", delay: .2, onComplete: () => {
+                        TweenMax.to($('#left_frgd'), .3, {opacity: 1, ease:Quad.easeIn, delay: .3});
+                        TweenMax.to($('#right_frgd'), .3, {opacity: 1, ease:Quad.easeIn, delay: .3});
+                        TweenMax.to($('#left_bkgd'), .3, {opacity: 1, ease:Quad.easeIn, delay: .6});
+                        TweenMax.to($('#right_bkgd'), .3, {opacity: 1, ease:Quad.easeIn, delay: .6});
+                        TweenMax.to($('#left_name'), .3, {opacity: 1, ease:Quad.easeIn, delay: .9});
+                        TweenMax.to($('#right_name'), .3, {opacity: 1, ease:Quad.easeIn, delay: .9});
+                        TweenMax.to($('#left_score'), .3, {opacity: 1, ease:Quad.easeIn, delay: .9});
+                        TweenMax.to($('#right_score'), .3, {opacity: 1, ease:Quad.easeIn, delay: .9});
+                    }});
 
+                }});
+            }
+        }
     }
 }
 
@@ -121,17 +149,21 @@ function map(location) {
         console.log(location);
         $(".left").css("left","31.6vw");
         $(".right").css("right","31.57vw");
+        return location;
     } else if (location == "pod") {
         console.log("pod:"+location);
         $(".left").css("left","12.75vw");
         $(".right").css("right","12.72vw");
+        return location;
     } else if (location == "juniper") {
         console.log("juniper:"+location);
         $(".left").css("left","13.75vw");
         $(".right").css("right","13.72vw");
+        return location;
     } else {
         console.log("normal:"+location);
         $(".left").css("left","0vw");
         $(".right").css("right","-0.03vw");
+        return location;
     }
 }
