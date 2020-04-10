@@ -1,5 +1,5 @@
 # KQB Scoreboard
-KQB Scoreboard is a simple scoreboard based off of HTML AJAX calls. The scoreboard is meant to be used as a broadcast asset for community members to stream games and keep track of score.
+KQB Scoreboard is a simple scoreboard based off of AJAX calls. The scoreboard is meant to be used as a broadcast asset for community members to stream games and keep track of score.
 
 ## Installation
 It works as-is! Clone the repository, add a browser source in OBS/Xsplit/Vmix with scoreboard.html and control how it shows up using StreamControl (controller/StreamControl.exe).
