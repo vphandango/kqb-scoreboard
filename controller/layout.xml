@@ -1,0 +1,31 @@
+<!DOCTYPE StreamControlLayout>
+<layout width="320" height="180" tabbed="1">
+    <tab name="Scoreboard">
+            <!-- Team Tags -->
+            <label x="20" y="20" width="200" height="30">Blue</label>
+            <label x="20" y="45" width="200" height="30">Orange</label>
+
+            <lineEdit id="Ln" x="60" y="25" width="140" height="20"></lineEdit>
+            <lineEdit id="Rn" x="60" y="50" width="140" height="20"></lineEdit>
+            <spinBox id="Ls" x="205" y="24" width="30" height="25"></spinBox>
+            <spinBox id="Rs" x="205" y="49" width="30" height="25"></spinBox>
+
+            <!-- Map -->
+            <label x="20" y="70" width="200" height="30">Map</label>
+            <comboBox id="map" x="60" y="75" width="125" height="20">
+                <comboItem value="tally">Tally Fields</comboItem>
+                <comboItem value="pod">The Pod</comboItem>
+                <comboItem value="juniper">Split Juniper</comboItem>
+                <comboItem value="othermaps">Everything Else</comboItem>
+            </comboBox>
+
+            <!-- Triggers -->
+            <button type="swap" x="240" y="25" width="60" height="24" id="swap" swapSet1="Ln,Ls" swapSet2="Rn,Rs">Swap</button>
+            <button type="reset" x="240" y="50" width="60" height="24" id="reset" reset="Ln,Ls,Rn,Rs">Reset</button>
+            <button type="timestamp" id="allTake" x="190" y="75" width="110" height="24" saveonclick="1">Toggle Scoreboard</button>
+
+        </tab>
+    <tab name="Future Stuff">
+        <label x="20" y="20" width="200" height="30">More stuff here someday :)</label>
+    </tab>
+</layout>
