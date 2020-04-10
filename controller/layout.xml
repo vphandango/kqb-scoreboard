@@ -13,10 +13,10 @@
             <!-- Map -->
             <label x="20" y="70" width="200" height="30">Map</label>
             <comboBox id="map" x="60" y="75" width="125" height="20">
+                <comboItem value="othermaps">Everything Else</comboItem>
                 <comboItem value="tally">Tally Fields</comboItem>
                 <comboItem value="pod">The Pod</comboItem>
                 <comboItem value="juniper">Split Juniper</comboItem>
-                <comboItem value="othermaps">Everything Else</comboItem>
             </comboBox>
 
             <!-- Triggers -->
