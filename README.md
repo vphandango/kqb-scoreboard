@@ -4,6 +4,8 @@ KQB Scoreboard is a simple scoreboard based off of HTML AJAX calls. The scoreboa
 ## Installation
 It works as-is! Clone the repository, add a browser source in OBS/Xsplit/Vmix with scoreboard.html and control how it shows up using StreamControl (controller/StreamControl.exe).
 
+You can also download the repository under [Releases](https://github.com/vphandango/kqb-scoreboard/releases).
+
 ## How to Use
 Open up StreamControl.exe and change the team names, current maps, and scores. Click the save icon on the top left of the program (CTRL+S also saves when StreamControl is the active window). To show/hide the scoreboard, click on the "Toggle Scoreboard" button.
 
