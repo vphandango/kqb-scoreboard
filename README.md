@@ -13,7 +13,7 @@ Open up StreamControl.exe and change the team names, current maps, and scores. C
 * **I don't see the scoreboard at all!**  
 Be sure that you toggle the scoreboard in StreamControl so it shows up.
 
-* **I don't like how it looks!** 
+* **I don't like how it looks!**  
 You're free to fork the repository and modify anything to your heart's content under GNU General Public License v3.
 
 * **It actually doesn't work!**  
