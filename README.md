@@ -3,6 +3,15 @@ KQB Scoreboard is a simple scoreboard based off of AJAX calls. The scoreboard is
 
 This is a fan-made project and is not associated with Killer Queen Black and its related subsidiaries.
 
+## Screenshots
+![Tally Fields](https://raw.githubusercontent.com/vphandango/kqb-scoreboard/master/screenshots/tallyfields.png)  
+
+![Split Juniper](https://raw.githubusercontent.com/vphandango/kqb-scoreboard/master/screenshots/splitjuniper.png)
+
+![The Spire](https://raw.githubusercontent.com/vphandango/kqb-scoreboard/master/screenshots/spire.png)
+
+![The Pod](https://raw.githubusercontent.com/vphandango/kqb-scoreboard/master/screenshots/pod.png)
+
 ## Installation
 It works as-is! Clone the repository, add a browser source in OBS/Xsplit/Vmix with scoreboard.html and control how it shows up using StreamControl (controller/StreamControl.exe).
 
